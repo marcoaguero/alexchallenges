@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "./styles.css";
+import "./login.css";
 
 function App() {
   // React States
@@ -76,7 +76,7 @@ function App() {
   );
 
   return (
-    <div className="app">
+    <div className="Login">
       <div className="login-form">
         <div className="title">Sign In</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
@@ -85,4 +85,5 @@ function App() {
   );
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Login />, rootElement);
